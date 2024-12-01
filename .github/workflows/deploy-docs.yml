@@ -1,0 +1,33 @@
+name: Deploy Documentation
+
+on:
+  push:
+    branches: [main]
+    paths: ['documentation/**']
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'pnpm'
+      
+      - name: Install dependencies
+        run: |
+          cd documentation
+          pnpm install
+
+      - name: Build documentation
+        run: |
+          cd documentation
+          pnpm build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./documentation/build
+          destination_dir: whatsapp-node 

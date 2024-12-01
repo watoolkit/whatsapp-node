@@ -1,4 +1,4 @@
-# @watools/whatsapp-sdk
+# @watoolkit/whatsapp-node
 
 A modern, lightweight TypeScript SDK for the WhatsApp Cloud API with full type safety and comprehensive webhook handling.
 
@@ -28,25 +28,25 @@ A modern, lightweight TypeScript SDK for the WhatsApp Cloud API with full type s
 ### npm
 
 ```bash
-npm install @watools/whatsapp-sdk
+npm install @watoolkit/whatsapp-node
 ```
 
 ### pnpm
 
 ```bash
-pnpm add @watools/whatsapp-sdk
+pnpm add @watoolkit/whatsapp-node
 ```
 
 ### yarn
 
 ```bash
-yarn add @watools/whatsapp-sdk
+yarn add @watoolkit/whatsapp-node
 ```
 
 ## Quick Start
 
 ```typescript
-import { WhatsAppClient } from "@watools/whatsapp-sdk";
+import { WhatsAppClient } from "@watoolkit/whatsapp-node";
 
 // Initialize the client
 const client = new WhatsAppClient({
@@ -75,7 +75,7 @@ await client.sendButtonMessage("1234567890", "Please choose an option", [
 ## Webhook Handling
 
 ```typescript
-import { WebhookHandler } from "@watools/whatsapp-sdk";
+import { WebhookHandler } from "@watoolkit/whatsapp-node";
 
 const webhookHandler = new WebhookHandler();
 
@@ -103,7 +103,7 @@ app.post("/webhook", express.json(), (req, res) => {
 const client = new WhatsAppClient({
   accessToken: string; // Meta access token
   phoneNumberId: string; // WhatsApp phone number ID
-  version?: string; // API version (default: 'v16.0')
+  version?: string; // API version (default: 'v21.0')
   baseUrl?: string; // API base URL (default: 'https://graph.facebook.com')
 });
 ```
@@ -202,4 +202,4 @@ try {
 
 ## License
 
-MIT © [WATools](https://github.com/watools)
+MIT © [WAToolkit](https://github.com/watoolkit)
