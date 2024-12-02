@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwatsapp_node_sdk_docs=self.webpackChunkwatsapp_node_sdk_docs||[]).push([[647],{7121:(s,e,a)=>{a.r(e),a.d(e,{default:()=>u});a(6540);var d=a(4164),r=a(1003),c=a(7559),n=a(2831),p=a(781),t=a(4848);function u(s){return(0,t.jsx)(r.e3,{className:(0,d.A)(c.G.wrapper.docsPages),children:(0,t.jsx)(p.A,{children:(0,n.v)(s.route.routes)})})}}}]);
